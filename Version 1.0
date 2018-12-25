@@ -1,0 +1,31 @@
+!Defining variables as inputs, outputs, or checkpoints
+DEFINE INPUT A
+DEFINE OUTPUT B
+DEFINE CHECKPOINT C
+DEFINE INPUT A:B:C !Define multiple inputs
+
+!Operations and redefining variables
+C IS NOT>A< END
+C IS OR>A:C< END
+C IS AND>A:C< END
+C IS NOT>AND>A:C<< END
+C IS XOR>A:B< END
+C IS OR>AND>NOT>A<:C<:AND>A:NOT>C<<< END
+C IS 1 END
+C IS OR>0:A< END
+
+!Function format
+FUNCTION param param2
+CALL line1 of function
+CALL line2 of function
+END nameOfFunctionAllCaps
+
+!Lights and buttons
+SCREEN xdimension ydimension
+LIGHT input xcoordinate ycoordinate
+
+!Comment for one line with no close
+
+(Multi
+Line
+Comment)
